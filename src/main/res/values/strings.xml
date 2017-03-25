@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Alpha饮食</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="about_call_us">联系开发者</string>
+    <string name="about_mail">yanyunlong2010@163.com</string>
+    <string name="about_version">应用版本</string>
+    <string name="about_us">About us</string>
+    <string name="menu_about">关于应用</string>
+    <string name="menu_recommend">每日推荐</string>
+    <string name="menu_collection">我的收藏</string>
+    <string name="action_finish">完成</string>
+    <string name="today_diet">今日饮食</string>
+    <string name="diet_name">名称:</string>
+    <string name="diet_weight">重量:</string>
+    <string name="diet_type">类型:</string>
+    <string name="diet_hint_weight_dw">单位(g)</string>
+    <string name="diet_hint_name">请输入名称</string>
+    <string name="recipe_material">材料</string>
+    <string name="recipe_step">做法</string>
+    <string name="recipe_collect_manage">食谱收藏管理</string>
+    <string name="action_share">分享</string>
+</resources>

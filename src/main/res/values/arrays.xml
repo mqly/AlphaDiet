@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="dietTypes">
+        <item>碳水化合物</item>
+        <item>油脂</item>
+        <item>蛋白质</item>
+        <item>维生素</item>
+        <item>无机盐</item>
+        <item>水</item>
+    </array>
+</resources>
