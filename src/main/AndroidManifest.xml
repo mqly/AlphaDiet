@@ -56,7 +56,7 @@
         </activity>
         <activity
             android:name=".activity.CollectDetailActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".activity.CollectManageActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <!--新浪-->

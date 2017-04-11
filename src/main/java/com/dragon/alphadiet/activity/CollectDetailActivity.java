@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -80,18 +79,17 @@ public class CollectDetailActivity extends AppCompatActivity {
 
             @Override
             public void onResult(SHARE_MEDIA platform) {
-                Log.d("plat", "platform" + platform);
-
-                Toast.makeText(CollectDetailActivity.this, platform + " 分享成功啦", Toast.LENGTH_SHORT).show();
+                //                Log.d("plat", "platform" + platform);
+                //                Toast.makeText(CollectDetailActivity.this, platform + " 分享成功啦", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onError(SHARE_MEDIA platform, Throwable t) {
-                Toast.makeText(CollectDetailActivity.this, platform + " 分享失败啦", Toast.LENGTH_SHORT).show();
-                if (t != null) {
-                    Log.d("throw", "throw:" + t.getMessage());
-                }
+                //                Toast.makeText(CollectDetailActivity.this, platform + " 分享失败啦", Toast.LENGTH_SHORT).show();
+                //                if (t != null) {
+                //                    Log.d("throw", "throw:" + t.getMessage());
+                //                }
             }
 
             @Override
@@ -177,12 +175,12 @@ public class CollectDetailActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_share:
-                        UMImage image = new UMImage(CollectDetailActivity.this, R.drawable.cj);
-                        UMImage thumb =  new UMImage(CollectDetailActivity.this, R.drawable.ft);
+                        UMImage image = new UMImage(CollectDetailActivity.this, getResourceByName(recipe.getRecipeImage()));
+                        UMImage thumb = new UMImage(CollectDetailActivity.this, getResourceByName(recipe.getRecipeImage()));
                         image.setThumb(thumb);
-                        new ShareAction(CollectDetailActivity.this).withText("hello")
+                        new ShareAction(CollectDetailActivity.this).withText(recipe.getRecipeName() + "的做法，快来看看吧")
                                 .withMedia(image)
-                                .setDisplayList(SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.SMS)
+                                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.SMS)
                                 .setCallback(umShareListener)
                                 .open();
                         break;
